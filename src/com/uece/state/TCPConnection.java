@@ -6,4 +6,16 @@ public class TCPConnection {
     public TCPConnection() {
         this.state = new TCPStateClosed();
     }
+
+    public void open() {
+        this.state = this.state.open();
+    }
+
+    public void broadcasting() {
+        this.state = this.state.broadcasting();
+    }
+
+    public void close() {
+        this.state = this.state.close();
+    }
 }

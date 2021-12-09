@@ -3,16 +3,19 @@ package com.uece.state;
 public class TCPStateClosed implements TCPState {
     @Override
     public TCPState open() {
-        return null;
+        System.out.println("Mudando para OPEN");
+        return new TCPStateOpen();
     }
 
     @Override
     public TCPState broadcasting() {
-        return null;
+        System.out.println("Mudando para BROADCASTRING");
+        return new TCPStateOpen();
     }
 
     @Override
     public TCPState close() {
-        return null;
+        System.out.println("BROADCASTRING");
+        return this;
     }
 }
