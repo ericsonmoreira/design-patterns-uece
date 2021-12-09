@@ -1,15 +1,27 @@
 package com.uece.questions.strategy;
 
-public class Logger {
+public abstract class Logger {
     private boolean ativo = false;
 
     private static Logger instance;
 
-    private Logger() {}
+    protected Logger() {}
 
-    public static Logger getInstance() {
+    public static Logger getInstance(LoggerTypes loggerType) {
         if (instance == null) {
-            instance = new Logger();
+            switch (loggerType) {
+                case EventViewer:
+                    instance = new LoggerEventViewer();
+                    break;
+                case File:
+                    instance = new LoggerFile();
+                    break;
+                case Database:
+                    instance = new LoggerDatabase();
+                    break;
+                default:
+                    break;
+            }
         }
         return instance;
     }
@@ -22,8 +34,5 @@ public class Logger {
         this.ativo = b;
     }
 
-    public void log(String s) {
-        if(this.ativo)
-            System.out.println("LOG :: " + s);
-    }
+    public abstract void log(String s);
 }
