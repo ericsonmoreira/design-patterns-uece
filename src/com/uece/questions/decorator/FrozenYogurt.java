@@ -1,15 +1,24 @@
 package com.uece.questions.decorator;
 
-/**
- * 4. Decorator: Você irá desenvolver um sistema para uma Frozen Yogurt que vende iogurtes  montados pelos próprios
- * clientes. Um yogurt contém uma base de yogurt de fruta, topos  variados (frutas cristalizadas, castanha,...) e
- * coberturas (calda de chocolate,...). O cliente  pode escolher quantos topos e quantas coberturas quiser, sendo que o
- * preço do iogurte final  aumenta para cada topo e cobertura adicionados. Utilize o padrão Decorator para modelar e
- * implementar o problema de cálculo do valor de um pedido minimizando o número de  classes.
- */
+public class FrozenYogurt implements Yogurt {
+    private double custo = 10.00;
 
-public class FrozenYogurt {
-    public static void main(String[] args) {
+    private String produto = "FrozenYogurt";
 
+    private String descricao = "O mais saboroso FrozenYogurt que você já provou";
+
+    @Override
+    public double getCusto() {
+        return this.custo;
+    }
+
+    @Override
+    public String getDescricao() {
+        return this.descricao;
+    }
+
+    @Override
+    public String getProdutos() {
+        return this.produto;
     }
 }
