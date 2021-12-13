@@ -25,8 +25,9 @@ public class Main {
 
             System.out.println(coinMachine.getTotal());
 
-            System.out.println(coinMachine.handlePurchaseProduct(0.05));
+            System.out.println(coinMachine.handlePurchaseProduct(0.1));
 
+            System.out.println(coinMachine.getTotal());
         } catch (Exception e) {
             e.printStackTrace();
         }

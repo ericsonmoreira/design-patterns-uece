@@ -41,14 +41,29 @@ public abstract class CoinMachineChain {
         }
     }
 
+    /**
+     * Trata o pagamento de um produto
+     * @param productValue Valor do produto
+     * @return Troco
+     * @throws Exception
+     */
     public double handlePurchaseProduct(double productValue) throws Exception {
         double total = getTotal();
         if (productValue <= total) {
-            // TODO: colocar aqui para remover as moedas
-            return total - productValue;
+            double troco = total - productValue;
+            cleanCoins();
+            return troco;
         } else {
             throw new Exception("Insuficiente money");
         }
+    }
+
+    /**
+     * Chamado para remover todas as moedas da máquina
+     */
+    private void cleanCoins() {
+        this.numCoins = 0;
+        if (next != null) next.cleanCoins();
     }
 
     protected abstract void handleCoin();

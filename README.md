@@ -6,7 +6,7 @@
 - [x] Strategy
 - [x] Factory Method
 - [x] Decorator
-- [ ] Chain of responsability
+- [x] Chain of responsability
 - [ ] Command
 - [ ] Observer
 - [ ] Template Method
