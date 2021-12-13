@@ -7,8 +7,8 @@
 - [x] Factory Method
 - [x] Decorator
 - [x] Chain of responsability
-- [ ] Command
-- [ ] Observer
+- [x] Command
+- [x] Observer
 - [ ] Template Method
 - [ ] Composite
 - [ ] Bridge
