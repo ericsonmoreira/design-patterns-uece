@@ -10,6 +10,9 @@ package com.uece.questions.command;
 
 public class Main {
     public static void main(String[] args) {
+        Joystick joystick = new Joystick();
 
+        joystick.handleCommandA();
+        joystick.handleCommandB();
     }
 }
