@@ -9,6 +9,23 @@ package com.uece.questions.composite;
 
 public class Main {
     public static void main(String[] args) {
+        try {
+            Congresso congresso = new Congresso("CCXP", 10);
+
+            Instituicao uece = new Instituicao("UECE");
+
+            uece.addParticipante(new Individuo("Ericson"));
+            uece.addParticipante(new Individuo("Rogerio"));
+            uece.addParticipante(new Individuo("Moreira"));
+
+            congresso.addParticipante(uece);
+
+            congresso.addParticipante(new Individuo("Marília"));
+
+            System.out.println(congresso);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }
