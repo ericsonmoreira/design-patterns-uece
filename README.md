@@ -10,7 +10,7 @@
 - [x] Command
 - [x] Observer
 - [ ] Template Method
-- [ ] Composite
+- [x] Composite
 - [ ] Bridge
 - [ ] Abstract Factory
 - [ ] Adapter
