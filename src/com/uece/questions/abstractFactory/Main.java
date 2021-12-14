@@ -1,5 +1,10 @@
 package com.uece.questions.abstractFactory;
 
+import java.time.DayOfWeek;
+import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
+import java.util.Locale;
+
 /**
  * 11. Abstract Factory: Considere os seguintes conceitos do mundo real: pizzaria, pizzaiolo,  pizza, consumidor.
  * Considere ainda que em uma determinada pizzaria, dois pizzaiolos se  alternam. Um deles trabalha segundas, quartas e
@@ -12,6 +17,17 @@ package com.uece.questions.abstractFactory;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println(getDayOfWeek("14/12/2021"));
+    }
 
+    /**
+     * Retorna o dia da semana por uma data em {@link String} no formato dd/MM/yyyy
+     * @param data
+     * @return
+     */
+    public static String getDayOfWeek(String data) {
+        DateTimeFormatter parser = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DayOfWeek dayOfWeek = DayOfWeek.from(parser.parse(data));
+        return dayOfWeek.getDisplayName(TextStyle.FULL_STANDALONE, new Locale("pt", "BR")).toUpperCase();
     }
 }
