@@ -12,7 +12,7 @@
 - [ ] Template Method
 - [x] Composite
 - [ ] Bridge
-- [ ] Abstract Factory
+- [x] Abstract Factory
 - [ ] Adapter
 - [ ] Memento
 - [ ] Mediator
