@@ -4,7 +4,9 @@ public class Duplica extends ImprimiNaTelaTemplate {
 
 	@Override
 	protected String tratarString(String string) {
-		return string.repeat(2);
+		// return string.repeat(2);
+		// TODO: rever essa parte aqui.
+		return string;
 	}
 
 	@Override
