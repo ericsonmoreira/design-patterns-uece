@@ -7,8 +7,8 @@ package com.uece.questions.templateMethod;
  * última que  inverta a string.
  */
 
-public class Main {
-    public static void main(String[] args) {
-
-    }
+public class Cliente {
+	public static void main(String[] args) {
+		TrataString trata = new TrataString();
+	}
 }
