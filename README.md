@@ -9,7 +9,7 @@
 - [x] Chain of responsability
 - [x] Command
 - [x] Observer
-- [ ] Template Method
+- [x] Template Method
 - [x] Composite
 - [ ] Bridge
 - [x] Abstract Factory
