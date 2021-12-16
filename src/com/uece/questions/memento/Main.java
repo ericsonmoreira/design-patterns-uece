@@ -1,5 +1,7 @@
 package com.uece.questions.memento;
 
+import java.util.Scanner;
+
 /**
  * 13. Memento: Faça um programa que simule uma calculadora simples com as operações  aritméticas básicas (soma,
  * subtração, multiplicação e divisão). Permita que o usuário faça uma  operação com vários operadores e operandos.
@@ -11,6 +13,34 @@ package com.uece.questions.memento;
 
 public class Main {
     public static void main(String[] args) {
+        Calculadora calculadora = new Calculadora();
 
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            showOptions();
+            String input = scanner.next();
+            boolean validation = input.matches("[0-9]|[+]|[-]|[*]|[/][c][f]");
+            if (!validation) break;
+            calculadora.escreverTexto(input);
+            System.out.println(calculadora.getTexto());
+        }
+
+        System.out.println(calculadora.getTexto());
+
+        calculadora.cancelEntry();
+
+        System.out.println(calculadora.getTexto());
+    }
+
+    public static void showOptions() {
+        System.out.println(
+                "Digite qualquer decimal ou alguma das opções:\n" +
+                "+ ===> Somar\n" +
+                "- ===> Subitrair\n" +
+                "* ===> Multiplicar\n" +
+                "/ ===> Dividir\n" +
+                "c ===> Desfazer\n" +
+                "f ===> Finalizar\n");
     }
 }
