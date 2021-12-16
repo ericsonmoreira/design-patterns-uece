@@ -11,8 +11,12 @@ package com.uece.questions.builder;
  * um  lanche ao atendente, recebe-o do outro funcionário e imprime o pedido.
  */
 
-public class Main {
+public class PatternBurgers {
     public static void main(String[] args) {
+        FuncionarioMontador montador = new FuncionarioMontador(new BurgerBuilder());
 
+        montador.contruirPedido("hambúrguer", "pequena", "carrinho", "coca");
+
+        System.out.println(montador.getPedido());
     }
 }

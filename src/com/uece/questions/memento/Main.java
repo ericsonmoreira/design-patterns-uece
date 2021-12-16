@@ -26,6 +26,8 @@ public class Main {
             System.out.println(calculadora.getTexto());
         }
 
+        // TODO: melhorar esse fluxo
+
         System.out.println(calculadora.getTexto());
 
         calculadora.cancelEntry();

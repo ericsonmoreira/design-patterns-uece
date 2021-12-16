@@ -1,8 +1,8 @@
 package com.uece.questions.memento;
 
+// TODO: fazer o médoto de calcular
 public class Calculadora {
     private String texto;
-
     private CareTaker careTaker;
 
     public Calculadora() {

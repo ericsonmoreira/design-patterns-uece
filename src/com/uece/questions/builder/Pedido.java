@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Pedido {
     private ArrayList<String> dentroDaCaixa = new ArrayList<String>();
+
     private ArrayList<String> foraDaCaixa = new ArrayList<String>();
 
     public void adicionarDentroDaCaixa(String item) {
