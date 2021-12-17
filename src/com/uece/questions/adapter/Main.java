@@ -9,6 +9,7 @@ package com.uece.questions.adapter;
 
 public class Main {
     public static void main(String[] args) {
-
+        Cliente cliente = new Cliente(new SomadorAdapter(new SomadorExistente()));
+        cliente.executar();
     }
 }

@@ -3,7 +3,7 @@ package com.uece.questions.adapter;
 public class Cliente {
     private SomadorEsperado somador;
 
-    private Cliente(SomadorEsperado somador) {
+    public Cliente(SomadorEsperado somador) {
         this.somador = somador;
     }
 

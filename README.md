@@ -13,7 +13,7 @@
 - [x] [Composite](src/com/uece/questions/composite)
 - [ ] Bridge
 - [x] [Abstract Factory](src/com/uece/questions/abstractFactory)
-- [ ] Adapter
+- [ ] [Adapter](src/com/uece/questions/adapter)
 - [ ] [Memento](src/com/uece/questions/memento)
 - [ ] [Mediator](src/com/uece/questions/mediator)
 - [ ] [Builder](src/com/uece/questions/builder)
