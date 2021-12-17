@@ -11,10 +11,10 @@
 - [x] [Observer](src/com/uece/questions/observer)
 - [x] [Template Method](src/com/uece/questions/templateMethod)
 - [x] [Composite](src/com/uece/questions/composite)
-- [ ] Bridge
+- [ ] [Bridge](src/com/uece/questions/bridge)
 - [x] [Abstract Factory](src/com/uece/questions/abstractFactory)
-- [ ] [Adapter](src/com/uece/questions/adapter)
-- [ ] [Memento](src/com/uece/questions/memento)
-- [ ] [Mediator](src/com/uece/questions/mediator)
-- [ ] [Builder](src/com/uece/questions/builder)
-- [ ] Iterator
+- [x] [Adapter](src/com/uece/questions/adapter)
+- [x] [Memento](src/com/uece/questions/memento)
+- [x] [Mediator](src/com/uece/questions/mediator)
+- [x] [Builder](src/com/uece/questions/builder)
+- [x] [Iterator](src/com/uece/questions/iterator)

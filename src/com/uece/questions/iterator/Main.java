@@ -13,7 +13,45 @@ package com.uece.questions.iterator;
  */
 
 public class Main {
+    public static int NUM_CARDS = 20;
+
     public static void main(String[] args) {
+        JogadorList A = new JogadorList("A");
+        JogadorStack B = new JogadorStack("B");
+
+        System.out.println(A.cards);
+        System.out.println(B.cards);
+
+        CardsIterator iteratorA = A.criarIterator();
+        CardsIterator iteratorB = B.criarIterator();
+
+
+        while (!(A.estaVazia() || B.estaVazia())) {
+            Card cardJogadorA = iteratorA.currentItem();
+            Card cardJogadorB = iteratorB.currentItem();
+
+            if (cardJogadorA.compareTo(cardJogadorB) < 0) {
+                A.cards.add(cardJogadorB);
+                B.cards.remove(cardJogadorB);
+            } else if (cardJogadorA.compareTo(cardJogadorB) > 0) {
+                B.cards.add(cardJogadorA);
+                A.cards.remove(cardJogadorA);
+            } else {
+                A.cards.remove(cardJogadorA);
+                B.cards.remove(cardJogadorB);
+                A.cards.add(cardJogadorA);
+                B.cards.add(cardJogadorB);
+            }
+
+            System.out.println(A);
+            System.out.println(B);
+        }
+
+        if (A.cards.size() < B.cards.size()) {
+            System.out.println("Jogador A Venceu");
+        } else {
+            System.out.println("Jogador B Venceu");
+        }
 
     }
 }
