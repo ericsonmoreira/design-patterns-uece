@@ -15,6 +15,6 @@
 - [x] [Abstract Factory](src/com/uece/questions/abstractFactory)
 - [ ] Adapter
 - [ ] [Memento](src/com/uece/questions/memento)
-- [ ] Mediator
+- [ ] [Mediator](src/com/uece/questions/mediator)
 - [ ] [Builder](src/com/uece/questions/builder)
 - [ ] Iterator

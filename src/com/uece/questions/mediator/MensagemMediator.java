@@ -16,6 +16,34 @@ public class MensagemMediator implements Mediator {
 
     @Override
     public void enviar(String mensagem, Colaborador colaborador) {
+        for (Colaborador c: colaboradores) {
+            if (!c.equals(colaborador)) {
+                c.receberMensagem(mensagem);
+            }
+        }
+    }
 
+    public void enviarTrabalhoParaAlunos(String trabalho) {
+        for (Colaborador c: colaboradores) {
+            if (c instanceof Aluno) {
+                c.receberMensagem(trabalho);
+            }
+        }
+    }
+
+    public void enviarTrabalhoDoAlunoParaProfessor(Aluno aluno, String trabalho) {
+        for (Colaborador c: colaboradores) {
+            if (c instanceof Professor) {
+                c.receberMensagem(trabalho + " de: " + aluno);
+            }
+        }
+    }
+
+    public void enviarMensagemAlunoParaAluno(Aluno alunoRemetente, Aluno alunoReceptor, String mensagem) {
+        for (Colaborador c: colaboradores) {
+            if (c instanceof Aluno && c.nome == alunoReceptor.nome) {
+                c.receberMensagem(mensagem + " de: " + alunoRemetente);
+            }
+        }
     }
 }
